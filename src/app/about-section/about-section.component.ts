@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { ButtonFlottingComponent } from '../button-flotting/button-flotting.component';
 
 @Component({
-  selector: 'app-banner',
+  selector: 'app-about-section',
   standalone: true,
   imports: [ ButtonFlottingComponent],
-  templateUrl: './banner.component.html',
-  styleUrl: './banner.component.css'
+  templateUrl: './about-section.component.html',
+  styleUrl: './about-section.component.css'
 })
-export class BannerComponent {
+export class AboutSectionComponent {
 
 }

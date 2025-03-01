@@ -1,2 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+/* Assure une bonne lisibilité sur l'image */
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Style pour la citation */
+  blockquote {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-button {
+    @apply w-12 h-12 text-white rounded-full flex items-center justify-center shadow-lg opacity-0 absolute;
+  }
+  
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+  
