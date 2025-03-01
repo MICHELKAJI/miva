@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,5 +20,13 @@ export class AppComponent {
         window.scrollTo(0, 0);
       }
     });
+  }
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    const shadow = document.getElementById('cursor-shadow');
+    if (shadow) {
+      shadow.style.left = `${event.clientX}px`;
+      shadow.style.top = `${event.clientY}px`;
+    }
   }
 }

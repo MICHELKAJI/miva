@@ -1,4 +1,4 @@
-<div class=" w-[48rem] p-6 bg-white rounded-lg border border-green-100">
+<div class=" lg:w-[48rem] p-6 bg-white rounded-lg border border-green-100">
     <form #contactForm="ngForm" (ngSubmit)="sendEmail(contactForm)">
       <!-- Champ Nom -->
       <div class="mb-4">
@@ -8,7 +8,7 @@
           name="name"
           [(ngModel)]="formData.name"
           required
-          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+          class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
           placeholder="Votre nom"
         />
       </div>
@@ -19,7 +19,7 @@
         <select
           name="category"
           [(ngModel)]="formData.category"
-          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+          class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
         >
           <option value="particulier">Particulier</option>
           <option value="entreprise">Entreprise</option>
@@ -34,7 +34,7 @@
           type="tel"
           name="phone"
           [(ngModel)]="formData.phone"
-          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+          class="w-full p-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
           placeholder="Votre numéro de téléphone"
         />
       </div>
@@ -46,7 +46,7 @@
           name="message"
           [(ngModel)]="formData.message"
           required
-          class="w-full p-2 h-32 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+          class="w-full p-4 h-32 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
           placeholder="Votre message"
         ></textarea>
       </div>

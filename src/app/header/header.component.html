@@ -1,5 +1,7 @@
-<header [ngClass]="isScrolled? 'fixed w-full top-0 py-4 flex flex-row justify-between px-20 bg-gray-800 shadow z-50' : 'fixed w-full top-0 py-4 flex flex-row justify-between px-20 bg-amber-20 shadow z-50 ' " class="">
-    <div class=" h-12 w-12 rounded-full"><img class="rounded-full" src="/images/logo.jpeg" alt="logo"></div>
+<header>
+    <div class=" hidden md:block">
+        <div [ngClass]="isScrolled? 'fixed w-full top-0 py-4 flex flex-row justify-between px-20 bg-gray-800 shadow z-50' : 'fixed w-full top-0 py-4 flex flex-row justify-between px-20 bg-amber-20 shadow z-50 ' ">
+            <div class=" h-12 w-12 rounded-full"><img class="rounded-full" src="/images/logo.jpeg" alt="logo"></div>
     <nav>
         <ul class=" flex flex-row gap-10">
             <li routerLinkActive="text-green-600 font-bold" [routerLinkActiveOptions]="{ exact: true }" routerLink=""  [ngClass]="isScrolled?'text-white font-bold hover:bg-green-600 p-2  transition duration-300 hover:text-white rounded cursor-pointer':'text-slate-500 font-bold hover:bg-green-600 p-2  transition duration-300 hover:text-white rounded cursor-pointer'">Accueil</li>
@@ -8,4 +10,14 @@
         </ul>
     </nav>
     <button class="border border-white p-2 text-white rounded h-10 hover:bg-green-800 transition duration-300 bg-green-600">Reserver une date</button>
+        </div>
+    </div>
+
+    <div [ngClass]="isScrolled ? 'fixed block md:hidden w-full shadow-2xl bg-slate-900 transition duration-300 z-50': 'fixed block bg-opacity-20 md:hidden w-full bg-gradient-to-tl from-green-600 to-blue-600 z-50 ' ">
+        <div class=" flex flex-row justify-between items-center p-4">
+            <div><img appNavigationMenu="" class=" h-10  w-10 rounded-full" src="images/logo.jpeg" alt="logo"></div>
+            <div><img (click)="modale.showModal()" class=" h-8 w-8" src="images/Menu.png" alt=""></div>
+        </div>
+     </div>
+    <app-menu-model #modale/>
 </header>

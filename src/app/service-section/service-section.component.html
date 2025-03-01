@@ -1,0 +1,20 @@
+<div class="py-10 lg:px-20 px:5 mt-20 bg-gray-100">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-green-600">Nos Services</h2>
+      <p class="text-gray-600 mt-2">Des services de nettoyage professionnels et efficaces</p>
+    </div>
+    <div *ngIf="isLoading" class="flex justify-center items-center py-20">
+        <div class="w-12 h-12 border-4 border-green-500 border-solid border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    <!-- Cartes des services -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let service of services" class="bg-white rounded-lg object-cover shadow-md p-6 hover:shadow-lg transition-all duration-300">
+        <img [src]="service.image" alt="Service Image" class="w-full h-64 object-cover rounded-lg">
+        <h3 class="text-xl font-semibold text-gray-800 mt-4">{{ service.title }}</h3>
+        <p class="text-gray-600 mt-2">{{ service.description }}</p>
+        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Reserver une date</button>
+      </div>
+    </div>
+    <app-button-flotting/>
+  </div>
+  
