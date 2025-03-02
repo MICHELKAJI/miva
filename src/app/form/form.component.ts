@@ -1,14 +1,14 @@
-import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 
 @Component({
-  selector: 'app-form',
-  standalone: true,
-  imports: [ NgIf, FormsModule ],
-  templateUrl: './form.component.html',
-  styleUrl: './form.component.css'
+    selector: 'app-form',
+    standalone: true,
+    imports: [CommonModule, FormsModule],
+    templateUrl: './form.component.html',
+    styleUrl: './form.component.css'
 })
 export class FormComponent {
 
@@ -16,13 +16,13 @@ export class FormComponent {
     name: '',
     category: 'particulier',
     phone: '',
-    message:'',
+    message: ''
   };
   
   messageSent = false;
 
-  sendEmail(contactForm: any) {
-    if (contactForm.valid) {
+  sendEmail(form: NgForm) {
+    if (form.valid) {
       const templateParams = {
         name: this.formData.name,
         category: this.formData.category,
@@ -35,7 +35,7 @@ export class FormComponent {
           (response) => {
             console.log('Email envoyé avec succès !', response);
             this.messageSent = true;
-            contactForm.reset();
+            form.reset();
             setTimeout(() => (this.messageSent = false), 5000);
           },
           (error) => {

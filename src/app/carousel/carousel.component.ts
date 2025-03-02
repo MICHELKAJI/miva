@@ -1,12 +1,17 @@
 import { NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-carousel',
-  standalone: true,
-  imports: [ NgFor, NgStyle],
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.css'
+    selector: 'app-carousel',
+    standalone: true,
+    imports: [
+        CommonModule,
+        NgFor,
+        NgStyle
+    ],
+    templateUrl: './carousel.component.html',
+    styleUrl: './carousel.component.css'
 })
 export class CarouselComponent {
 

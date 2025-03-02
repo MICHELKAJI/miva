@@ -1,14 +1,14 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { Router, NavigationEnd, RouterOutlet, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [ RouterOutlet, LandingPageComponent, HeaderComponent ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    imports: [RouterOutlet, RouterModule, LandingPageComponent, HeaderComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'miva';

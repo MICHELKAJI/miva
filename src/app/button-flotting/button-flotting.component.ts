@@ -1,13 +1,13 @@
-import { NgIf } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import gsap from 'gsap';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-button-flotting',
-  standalone: true,
-  imports: [ NgIf],
-  templateUrl: './button-flotting.component.html',
-  styleUrl: './button-flotting.component.css'
+    selector: 'app-button-flotting',
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './button-flotting.component.html',
+    styleUrl: './button-flotting.component.css'
 })
 export class ButtonFlottingComponent {
   isOpen = false;

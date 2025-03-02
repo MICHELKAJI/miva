@@ -1,13 +1,13 @@
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ButtonFlottingComponent } from '../button-flotting/button-flotting.component';
 
 @Component({
-  selector: 'app-service-section',
-  standalone: true,
-  imports: [NgFor, NgIf, ButtonFlottingComponent],
-  templateUrl: './service-section.component.html',
-  styleUrl: './service-section.component.css'
+    selector: 'app-service-section',
+    standalone: true,
+    imports: [CommonModule, ButtonFlottingComponent],
+    templateUrl: './service-section.component.html',
+    styleUrl: './service-section.component.css'
 })
 export class ServiceSectionComponent implements OnInit {
   isLoading = true;
@@ -29,7 +29,7 @@ export class ServiceSectionComponent implements OnInit {
     },
     {
       title: "Electricité",
-      description: "Notre équipe intervient dans l’installation de toutes les installations électriques dans les maisons, en respectant les normes de sécurité et de règles de l’art.",
+      description: "Notre équipe intervient dans l'installation de toutes les installations électriques dans les maisons, en respectant les normes de sécurité et de règles de l'art.",
       image: "/images/handsome-man-cleaning-house.jpg"
     },
     {
@@ -39,7 +39,7 @@ export class ServiceSectionComponent implements OnInit {
     },
     {
       title: "Pressing",
-      description: "Ce service est spécialisé dans l’avantage de vêtements de classe, tels que les vestes, les robes, les sultans, etc., pour les clients souhaitant bénéficier d’un service rapide et professionnel. Ce programme se démarque par son professionnalisme et sa rapidité dans la réalisation des tâches.",
+      description: "Ce service est spécialisé dans l'avantage de vêtements de classe, tels que les vestes, les robes, les sultans, etc., pour les clients souhaitant bénéficier d'un service rapide et professionnel. Ce programme se démarque par son professionnalisme et sa rapidité dans la réalisation des tâches.",
       image: "/images/handsome-man-cleaning-house.jpg"
     }
   ];

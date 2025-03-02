@@ -1,21 +1,25 @@
-import { Directive, ElementRef, Input, HostListener } from '@angular/core';
+import { Directive, ElementRef, Input, HostListener, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Directive({
   selector: '[appServiceSection]',
-  standalone: true
+  standalone: true,
 })
 export class ServiceSectionDirective {
 
-  @Input() appServiceSection  : string = '';
+  @Input() appServiceSection: string = '';
 
-  constructor(private elementRf : ElementRef, private router: Router) { }
+  private router = inject(Router); //
+
+  constructor(private elementRf: ElementRef) { }
+
   @HostListener('click')
-  onClick(){
+  onClick() {
     this.navigateTo(this.appServiceSection);
   }
-  navigateTo(path: string){
-    this.router.navigate([path])
-  }
 
+  private navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
 }
+

@@ -1,14 +1,14 @@
-import { NgClass } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
 import gsap from 'gsap';
 import { MenunavigationDirective } from '../menunavigation.directive';
 
 @Component({
-  selector: 'app-menu-model',
-  standalone: true,
-  imports: [NgClass, MenunavigationDirective],
-  templateUrl: './menu-model.component.html',
-  styleUrl: './menu-model.component.css'
+    selector: 'app-menu-model',
+    standalone: true,
+    imports: [CommonModule, MenunavigationDirective],
+    templateUrl: './menu-model.component.html',
+    styleUrl: './menu-model.component.css'
 })
 export class MenuModelComponent {
   @ViewChild('modal') modal!: ElementRef;

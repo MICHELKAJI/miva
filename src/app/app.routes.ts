@@ -6,5 +6,6 @@ import { ServicePageComponent } from './service-page/service-page.component';
 export const routes: Routes = [
     {path:'', component: LandingPageComponent},
     {path:'about', component: AboutPageComponent},
-    {path:'service', component: ServicePageComponent}
+    {path:'service', component: ServicePageComponent},
+    { path: '', redirectTo: '/', pathMatch: 'full' }
 ];
