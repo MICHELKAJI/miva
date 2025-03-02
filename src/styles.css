@@ -23,15 +23,5 @@
     transform: scale(1.05);
   }
 
-  #cursor-shadow {
-    position: fixed;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background: rgba(233, 232, 193, 0.2); /* Ombre semi-transparente */
-    box-shadow: 0 0 15px rgba(185, 225, 150, 0.4);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: transform 0.05s ease-out;
-  }
+  
   
