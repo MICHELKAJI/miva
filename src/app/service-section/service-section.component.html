@@ -8,7 +8,7 @@
       </div>
     <!-- Cartes des services -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div *ngFor="let service of services" class="object-cover shadow-md p-6 hover:shadow-lg transition-all duration-300">
+      <div #animatedBox *ngFor="let service of services" class="object-cover shadow-md p-6 hover:shadow-lg transition-all duration-300">
         <img [src]="service.image" alt="Service Image" class="w-full h-64 object-cover rounded-lg">
         <h3 class="text-xl font-semibold text-gray-800 mt-4">{{ service.title }}</h3>
         <p class="text-gray-600 mt-2">{{ service.description }}</p>

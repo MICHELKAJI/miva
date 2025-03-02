@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ButtonFlottingComponent } from '../button-flotting/button-flotting.component';
+import gsap from 'gsap';
 
 @Component({
     selector: 'app-service-section',
@@ -48,4 +49,23 @@ export class ServiceSectionComponent implements OnInit {
       this.isLoading = false; // Après 2 secondes, cacher le loader
     }, 2000);
   }
+  @ViewChildren('animatedBox') animatedBoxes!: QueryList<ElementRef>;
+  ngAfterViewInit() {
+    this.animatedBoxes.forEach((box, index) => {
+      gsap.from(box.nativeElement, {
+        opacity: 0,
+        y: 100,
+        scale: 0.9,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: index * 0.2, // Décalage progressif des animations
+        scrollTrigger: {
+        trigger: box.nativeElement,
+        start: "top 85%", // Déclenchement quand l’élément est visible
+        toggleActions: "play none none none",
+        },
+      });
+    });
+  }
+ 
 }
