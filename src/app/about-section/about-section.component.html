@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="flex flex-row gap-3">
-                <button class="bg-green-600 border hover:bg-green-900 rounded duration-300 transition border-green-600 text-white p-2">
+                <button (click)="modal.showModal()" class="bg-green-600 border hover:bg-green-900 rounded duration-300 transition border-green-600 text-white p-2">
                     Réserver une date
                 </button>
                 <button appMenunavigation="/service" class="text-slate-900 hover:bg-green-900 duration-300 hover:text-white transition p-2 border border-green-600 rounded">
@@ -84,4 +84,5 @@
         </div>
     </div>
     <app-button-flotting/>
+    <app-modale-calendy #modal />
 </main>

@@ -18,7 +18,7 @@
                     tels que les meubles, les murs, les plafonds, les matelas,
                     les canapés, etc.., en utilisant des techniques et des produits de pointe pour assurer une propreté optimale.
                 </p>
-                <button class="flex flex-row border border-green-600 p-2 text-slate-900 font-bold rounded hover:bg-green-800 hover:text-white shadow-2xl transition duration-30"><span>Reserver une date</span><img class="h-5 w-5" src="/images/arrow-up-right.svg" alt="row"></button>
+                <button (click)="modal.showModal()" class="flex flex-row border border-green-600 p-2 text-slate-900 font-bold rounded hover:bg-green-800 hover:text-white shadow-2xl transition duration-30"><span>Reserver une date</span><img class="h-5 w-5" src="/images/arrow-up-right.svg" alt="row"></button>
             </div>
         </div>
         <div #animatedBox >
@@ -32,7 +32,7 @@
                   Toute notre équipe est consciente de son impact environnemental et travaille constamment à réduire la consommation d'eau,
                   d'énergie et de produits chimiques dans ses processus de nettoyage.
                 </p>
-                <button class="border border-white p-2 text-white font-bold rounded hover:bg-green-800 shadow-2xl transition duration-300 bg-green-600">Reserver une date</button>
+                <button (click)="modal.showModal()" class="border border-white p-2 text-white font-bold rounded hover:bg-green-800 shadow-2xl transition duration-300 bg-green-600">Reserver une date</button>
             </div>
         </div>
         <div #animatedBox >
@@ -44,7 +44,7 @@
                    ce programme se démarque par son professionnalisme et sa rapidité, le nettoyage efficace et complet des véhicules tant à l'intérieur que à l'extérieur,
                    en utilisant des techniques et des produits de pointe.
                 </p>
-                <button class="flex flex-row border border-green-600 p-2 text-slate-900 font-bold rounded hover:bg-green-800 hover:text-white shadow-2xl transition duration-30"><span>Reserver une date</span><img src="/images/arrow-up-right.svg" alt="row"></button>
+                <button (click)="modal.showModal()" class="flex flex-row border border-green-600 p-2 text-slate-900 font-bold rounded hover:bg-green-800 hover:text-white shadow-2xl transition duration-30"><span>Reserver une date</span><img src="/images/arrow-up-right.svg" alt="row"></button>
             </div>
         </div>
           <div class="flex flex-col justify-center items-center">                       
@@ -64,4 +64,5 @@
             
           </div>
     </div>
+    <app-modale-calendy #modal />
 </main>

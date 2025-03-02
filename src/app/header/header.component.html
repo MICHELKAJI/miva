@@ -9,7 +9,7 @@
             <li routerLinkActive="text-green-600 font-bold" routerLink="service"  [ngClass]="isScrolled?'text-white font-bold hover:bg-green-600 p-2  transition duration-300 hover:text-white rounded cursor-pointer':'text-slate-500 font-bold hover:bg-green-600 p-2  transition duration-300 hover:text-white rounded cursor-pointer'">Service</li>
         </ul>
     </nav>
-    <button class="border border-white p-2 text-white rounded h-10 hover:bg-green-800 transition duration-300 bg-green-600">Reserver une date</button>
+    <button (click)="modal.showModal()" class="border border-white p-2 text-white rounded h-10 hover:bg-green-800 transition duration-300 bg-green-600">Reserver une date</button>
         </div>
     </div>
 
@@ -20,4 +20,5 @@
         </div>
      </div>
     <app-menu-model #modale/>
+    <app-modale-calendy #modal />
 </header>

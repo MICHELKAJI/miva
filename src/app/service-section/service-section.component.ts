@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ButtonFlottingComponent } from '../button-flotting/button-flotting.component';
 import gsap from 'gsap';
+import { ModaleCalendyComponent } from '../modale-calendy/modale-calendy.component';
 
 @Component({
     selector: 'app-service-section',
     standalone: true,
-    imports: [CommonModule, ButtonFlottingComponent],
+    imports: [CommonModule, ButtonFlottingComponent, ModaleCalendyComponent],
     templateUrl: './service-section.component.html',
     styleUrl: './service-section.component.css'
 })

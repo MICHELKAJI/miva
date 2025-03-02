@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { MenunavigationDirective } from '../menunavigation.directive';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ModaleCalendyComponent } from '../modale-calendy/modale-calendy.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
     selector: 'app-service',
     standalone: true,
-    imports: [CommonModule, MenunavigationDirective],
+    imports: [CommonModule, MenunavigationDirective, ModaleCalendyComponent],
     templateUrl: './service.component.html',
     styleUrl: './service.component.css'
 })

@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MenuModelComponent } from '../menu-model/menu-model.component';
+import { ModaleCalendyComponent } from '../modale-calendy/modale-calendy.component';
 
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [CommonModule, RouterLink, RouterLinkActive, MenuModelComponent],
+    imports: [CommonModule, RouterLink, RouterLinkActive, MenuModelComponent, ModaleCalendyComponent],
     templateUrl: './header.component.html',
     styleUrl: './header.component.css'
 })
