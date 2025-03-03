@@ -1,4 +1,4 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren, AfterViewChecked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenunavigationDirective } from '../menunavigation.directive';
 import gsap from 'gsap';
@@ -14,25 +14,30 @@ gsap.registerPlugin(ScrollTrigger);
     templateUrl: './service.component.html',
     styleUrl: './service.component.css'
 })
-export class ServiceComponent {
+export class ServiceComponent implements AfterViewChecked {
   @ViewChildren('animatedBox') animatedBoxes!: QueryList<ElementRef>;
-  ngAfterViewInit() {
+
+  private hasAnimated = new Set<Element>(); // Pour éviter les animations répétées
+
+  ngAfterViewChecked() {
     this.animatedBoxes.forEach((box, index) => {
-      gsap.from(box.nativeElement, {
-        opacity: 0,
-        y: 100,
-        scale: 0.9,
-        duration: 1.2,
-        ease: "power3.out",
-        delay: index * 0.2, // Décalage progressif des animations
-        scrollTrigger: {
-        trigger: box.nativeElement,
-        start: "top 85%", // Déclenchement quand l’élément est visible
-        toggleActions: "play none none none",
-        },
-      });
+      if (!this.hasAnimated.has(box.nativeElement)) {
+        gsap.from(box.nativeElement, {
+          opacity: 0,
+          y: 100,
+          scale: 0.9,
+          duration: 1.2,
+          ease: "power3.out",
+          delay: index * 0.2, // Décalage progressif des animations
+          scrollTrigger: {
+            trigger: box.nativeElement,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+
+        this.hasAnimated.add(box.nativeElement); // Marque cet élément comme animé
+      }
     });
   }
- 
 }
-
