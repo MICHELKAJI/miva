@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
 import gsap from 'gsap';
 import { MenunavigationDirective } from '../menunavigation.directive';
+import { CarouselMenuComponent } from '../carousel-menu/carousel-menu.component';
 
 @Component({
     selector: 'app-menu-model',
     standalone: true,
-    imports: [CommonModule, MenunavigationDirective],
+    imports: [CommonModule, MenunavigationDirective, CarouselMenuComponent],
     templateUrl: './menu-model.component.html',
     styleUrl: './menu-model.component.css'
 })

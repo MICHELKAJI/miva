@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ButtonFlottingComponent } from '../button-flotting/button-flotting.component';
 import gsap from 'gsap';
 import { ModaleCalendyComponent } from '../modale-calendy/modale-calendy.component';
+import { MenunavigationDirective } from '../menunavigation.directive';
 
 @Component({
     selector: 'app-banner',
     standalone: true,
-    imports: [CommonModule, ButtonFlottingComponent, ModaleCalendyComponent],
+    imports: [CommonModule, ButtonFlottingComponent, ModaleCalendyComponent, MenunavigationDirective],
     templateUrl: './banner.component.html',
     styleUrl: './banner.component.css'
 })
