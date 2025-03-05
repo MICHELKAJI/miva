@@ -15,15 +15,17 @@ export class ServiceSectionComponent implements OnInit {
   isLoading = true;
   services = [
     {
-      title: "Car Wash",
-      description: "Ce service est la solution idéale pour les sociétés et personnes privées souhaitant assurer un nettoyage professionnel et rapide de leurs véhicules. ce programme se démarque par son professionnalisme et sa rapidité, le nettoyage efficace et complet des véhicules tant à l'intérieur que à l'extérieur, en utilisant des techniques et des produits de pointe.",
-      image: "/images/afro-woman-holding-bucket-with-cleaning-items-min.jpg"
-    },
-    {
       title: "Home Clean",
       description: "Ce service est spécialisé dans le nettoyage de chantiers pré-habités et de maisons déjà habitée en incluant le nettoyage de tous les contenus de la maison, tels que les meubles, les murs, les plafonds, les matelas, les canapés, etc.., en utilisant des techniques et des produits de pointe pour assurer une propreté optimale.",
-      image: "/images/handsome-man-cleaning-house-min.jpg"
+      image: "/images/afro-woman-holding-bucket-with-cleaning-items-min.jpg"
     },
+
+    {
+      title: "Car Wash",
+      description: "Ce service est la solution idéale pour les sociétés et personnes privées souhaitant assurer un nettoyage professionnel et rapide de leurs véhicules. ce programme se démarque par son professionnalisme et sa rapidité, le nettoyage efficace et complet des véhicules tant à l'intérieur que à l'extérieur, en utilisant des techniques et des produits de pointe.",
+      image: "/images/carwashing.jpg"
+    },
+   
     {
       title: "Nettoyage Meubles",
       description: "Ce service est spécialisé dans le nettoyage complet et efficace des vêtements et la réalisation d'autres travaux domestiques selon les besoins des clients, qu'ils soient une famille, un étudiant ou un célibataire. Toute notre équipe est consciente de son impact environnemental et travaille constamment à réduire la consommation d'eau, d'énergie et de produits chimiques dans ses processus de nettoyage.",
@@ -32,12 +34,12 @@ export class ServiceSectionComponent implements OnInit {
     {
       title: "Electricité",
       description: "Notre équipe intervient dans l'installation de toutes les installations électriques dans les maisons, en respectant les normes de sécurité et de règles de l'art.",
-      image: "/images/handsome-man-cleaning-house-min.jpg"
+      image: "/images/electricaler.jpg"
     },
     {
       title: "Peinture",
       description: "Nous proposons un service de peinture spécialisé dans la réalisation de peintures intérieures et extérieures pour les clients souhaitant personnaliser et protéger leurs maisons, bâtiments et autres structures.",
-      image: "/images/handsome-man-cleaning-house-min.jpg"
+      image: "/images/peunture.jpg"
     },
     {
       title: "Pressing",

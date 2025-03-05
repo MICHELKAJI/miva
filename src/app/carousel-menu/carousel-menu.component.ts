@@ -15,6 +15,10 @@ export class CarouselMenuComponent {
     { avatar: "/images/equipe4.jpeg"},
     { avatar: "/images/equipe5.jpeg"},
     { avatar: "/images/equipe7.jpeg"},
+    { avatar: "/images/equipe8.jpeg"},
+    { avatar: "/images/equipe9.jpeg"},
+    { avatar: "/images/equipe10.jpeg"},
+    { avatar: "/images/equipe11.jpeg"}
     
   ];
 
